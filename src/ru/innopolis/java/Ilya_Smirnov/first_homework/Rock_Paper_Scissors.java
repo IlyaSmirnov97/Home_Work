@@ -24,23 +24,23 @@ public class Rock_Paper_Scissors {
             if (vasya == 0) {
                 System.out.println("Ничья");
             } else if (vasya == 1) {
-                System.out.println("Выйграл Петя");
+                System.out.println("Выиграл Петя");
             } else if (vasya == 2) {
-                System.out.println("Выйграл Вася");
+                System.out.println("Выиграл Вася");
             }
         } else if (petya == 1) {
             if (vasya == 0) {
-                System.out.println("Выйграл Вася");
+                System.out.println("Выиграл Вася");
             } else if (vasya == 1) {
                 System.out.println("Ничья");
             } else if (vasya == 2) {
-                System.out.println("Выйграл Петя");
+                System.out.println("Выиграл Петя");
             }
         } else if (petya == 2) {
             if (vasya == 0) {
-                System.out.println("Выйграл Петя");
+                System.out.println("Выиграл Петя");
             } else if (vasya == 1) {
-                System.out.println("Выйграл Вася");
+                System.out.println("Выиграл Вася");
             } else if (vasya == 2) {
                 System.out.println("Ничья");
             }
