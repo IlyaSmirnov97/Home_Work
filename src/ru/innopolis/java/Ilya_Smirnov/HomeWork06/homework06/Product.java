@@ -7,10 +7,10 @@ public class Product {
     private int price;
 
     public Product(String productName, int price) {
-        if (productName.equals(null) || productName.length()<=0){
+        if (productName.equals(null) || productName.length() <= 0) {
             throw new RuntimeException("Название товара не может быть пустым");
         }
-        if (price < 0){
+        if (price < 0) {
             throw new RuntimeException("Цена не может быть отрицательной");
         }
         this.productName = productName;
@@ -41,6 +41,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return productName;
+        return "Название товара: " + productName +
+                " цена тоавара = " + price;
     }
 }
