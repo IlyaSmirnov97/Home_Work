@@ -1,0 +1,10 @@
+На гонке: CasualRace
+Победу одержала машина: ShowCar{brand='Bugatti', model='Chiron', year=2023, horsepower=1500, acceleration=1, suspension=3, durability=10, stars=7}
+На гонке: DragRace
+Победу одержала машина: ShowCar{brand='Bugatti', model='Chiron', year=2023, horsepower=1500, acceleration=1, suspension=3, durability=10, stars=7}
+На гонке: DriftRace
+Победу одержала машина: Car{brand='Honda', model='Civic', year=2019, horsepower=180, acceleration=9, suspension=6, durability=11}
+На гонке: TimeLimitRace
+Победу одержала машина: Car{brand='Toyota', model='Camry', year=2020, horsepower=200, acceleration=8, suspension=5, durability=10}
+На гонке: CircuitRace
+Победу одержала машина: Car{brand='Toyota', model='Camry', year=2020, horsepower=200, acceleration=8, suspension=5, durability=10}
