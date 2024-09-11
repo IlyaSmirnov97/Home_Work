@@ -6,3 +6,30 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# Ignored files
+*.class
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Directories
+bin/
+out/
+
+# Maven
+target/
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
