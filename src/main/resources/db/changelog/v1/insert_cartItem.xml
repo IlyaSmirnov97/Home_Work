@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="11" author="Ilya">
+        <insert tableName="cart_items">
+            <column name="id" value="f44c4a5b-1c37-41a1-b1f0-cf299bca1f61"/> <!-- Уникальный идентификатор элемента корзины -->
+            <column name="cart_id" value="d3e0380e-1d4b-4186-bc96-7ec1fcd7a5ea"/> <!-- UUID корзины для первого клиента -->
+            <column name="pizza_id" value="6d6d579b-91c4-448f-b53b-56dbff6f2d76"/> <!-- UUID пиццы  Гавайская -->
+            <column name="quantity" value="2"/> <!-- Количество пиццы -->
+        </insert>
+
+        <insert tableName="cart_items">
+            <column name="id" value="89d88f0e-6763-46af-b8c1-7b9b9e00f5e7"/> <!-- Уникальный идентификатор элемента корзины -->
+            <column name="cart_id" value="d3e0380e-1d4b-4186-bc96-7ec1fcd7a5ea"/> <!-- UUID корзины для первого клиента -->
+            <column name="pizza_id" value="cf0c5167-3b2b-44cc-836e-4b9300e043a9"/> <!-- UUID пиццы Карбонара -->
+            <column name="quantity" value="1"/> <!-- Количество пиццы -->
+        </insert>
+
+        <insert tableName="cart_items">
+            <column name="id" value="256fb3b0-6733-4ac8-b7f1-73f9d5cfb0b5"/> <!-- Уникальный идентификатор элемента корзины -->
+            <column name="cart_id" value="52b6edcc-c61b-4d8e-89c2-f2e58012e70c"/> <!-- UUID корзины для второго клиента -->
+            <column name="pizza_id" value="42c54772-bc6b-4861-8b7f-f5c2fa433b0b"/> <!-- UUID пиццы Острая-->
+            <column name="quantity" value="3"/> <!-- Количество пиццы -->
+        </insert>
+
+        <insert tableName="cart_items">
+            <column name="id" value="f11b917c-ec41-4e04-b0d0-e9b25f86b186"/> <!-- Уникальный идентификатор элемента корзины -->
+            <column name="cart_id" value="52b6edcc-c61b-4d8e-89c2-f2e58012e70c"/> <!-- UUID корзины для второго клиента -->
+            <column name="pizza_id" value="100d72f0-0b47-42d8-b95e-bf83d41c774a"/> <!-- UUID пиццы Маргарита -->
+            <column name="quantity" value="1"/> <!-- Количество пиццы -->
+        </insert>
+
+        <insert tableName="cart_items">
+            <column name="id" value="e6c3f1ae-00c7-4bc0-8e5e-16dc6187a65e"/> <!-- Уникальный идентификатор элемента корзины -->
+            <column name="cart_id" value="47948d46-5e71-4a03-bf83-c0e40f2030ae"/> <!-- UUID корзины для третьего клиента -->
+            <column name="pizza_id" value="5c75fcb3-2af6-4b1f-8c5f-1c1ef8a6231e"/> <!-- UUID пиццы  Пепперони -->
+            <column name="quantity" value="2"/> <!-- Количество пиццы -->
+        </insert>
+    </changeSet>
+</databaseChangeLog>

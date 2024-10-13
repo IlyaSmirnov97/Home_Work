@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="14" author="Ilya">
+        <insert tableName="order_items">
+            <column name="id" value="e0d0fbb3-44f7-4b36-8ae2-bc7afc36e6ff"/>
+            <column name="order_id" value="fc2ecfae-4fa4-4672-90ac-6672639fd370"/> <!-- Замените на реальный UUID заказа -->
+            <column name="pizza_id" value="100d72f0-0b47-42d8-b95e-bf83d41c774a"/> <!-- Маргарита -->
+            <column name="quantity" value="2"/>
+            <column name="status" value="PENDING"/>
+        </insert>
+
+        <insert tableName="order_items">
+            <column name="id" value="a94c6f84-e505-4451-9b3a-1de72e8c3a99"/>
+            <column name="order_id" value="e0d0fbb3-44f7-4b36-8ae2-bc7afc36e6ff"/> <!-- Заказ NEW -->
+            <column name="pizza_id" value="5c75fcb3-2af6-4b1f-8c5f-1c1ef8a6231e"/> <!-- Пепперони -->
+            <column name="quantity" value="1"/>
+            <column name="status" value="PENDING"/>
+        </insert>
+
+        <insert tableName="order_items">
+            <column name="id" value="a3dcd201-4907-49f5-b5d3-e4cd64b173ec"/>
+            <column name="order_id" value="b32b37f1-4e38-4b93-a49b-0a17dc2d3f4c"/> <!-- Заказ IN_PROGRESS -->
+            <column name="pizza_id" value="cb9d2e92-0f9a-4d79-a529-1f90e30f1d36"/> <!-- Четыре сезона -->
+            <column name="quantity" value="3"/>
+            <column name="status" value="PENDING"/>
+        </insert>
+
+        <insert tableName="order_items">
+            <column name="id" value="6234a8e4-beb1-49dc-84f4-51fd20e178eb"/>
+            <column name="order_id" value="b32b37f1-4e38-4b93-a49b-0a17dc2d3f4c"/> <!-- Заказ IN_PROGRESS -->
+            <column name="pizza_id" value="6d6d579b-91c4-448f-b53b-56dbff6f2d76"/> <!-- Гавайская -->
+            <column name="quantity" value="2"/>
+            <column name="status" value="PENDING"/>
+        </insert>
+
+        <insert tableName="order_items">
+            <column name="id" value="d3ee48b7-6c78-4dc1-b438-f1bbf8d1c084"/>
+            <column name="order_id" value="6aeea53e-6b58-4451-b028-fbf8fa2e8b7f"/> <!-- Заказ COMPLETED -->
+            <column name="pizza_id" value="1f0f4e69-61c8-45dc-8ca8-e8a54e2d378c"/> <!-- Вегетарианская -->
+            <column name="quantity" value="1"/>
+            <column name="status" value="SERVED"/>
+        </insert>
+
+        <insert tableName="order_items">
+            <column name="id" value="7f19cb61-9cb6-4082-98c1-fc26426d3c4e"/>
+            <column name="order_id" value="6aeea53e-6b58-4451-b028-fbf8fa2e8b7f"/> <!-- Заказ COMPLETED -->
+            <column name="pizza_id" value="42c54772-bc6b-4861-8b7f-f5c2fa433b0b"/> <!-- Острая -->
+            <column name="quantity" value="1"/>
+            <column name="status" value="SERVED"/>
+        </insert>
+
+        <insert tableName="order_items">
+            <column name="id" value="8066dede-0c12-4fe7-bb7a-20755aae14df"/>
+            <column name="order_id" value="8066dede-0c12-4fe7-bb7a-20755aae14df"/> <!-- Заказ CANCELLED -->
+            <column name="pizza_id" value="cf0c5167-3b2b-44cc-836e-4b9300e043a9"/> <!-- Карбонара -->
+            <column name="quantity" value="2"/>
+            <column name="status" value="CANCELLED"/>
+        </insert>
+
+        <insert tableName="order_items">
+            <column name="id" value="b92aef43-7b5d-4c47-a086-660fa006f576"/>
+            <column name="order_id" value="12caa183-c82f-46d2-9346-0a73ab6b3025"/> <!-- Заказ AWAITING_PICKUP -->
+            <column name="pizza_id" value="1f0f4e69-61c8-45dc-8ca8-e8a54e2d378c"/> <!-- Вегетарианская -->
+            <column name="quantity" value="1"/>
+            <column name="status" value="PREPARED"/>
+        </insert>
+
+        <insert tableName="order_items">
+            <column name="id" value="1e227fd4-7338-4a9b-a310-3e042a5c2eb9"/>
+            <column name="order_id" value="12caa183-c82f-46d2-9346-0a73ab6b3025"/> <!-- Заказ AWAITING_PICKUP -->
+            <column name="pizza_id" value="cb9d2e92-0f9a-4d79-a529-1f90e30f1d36"/> <!-- Четыре сезона -->
+            <column name="quantity" value="1"/>
+            <column name="status" value="PREPARED"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

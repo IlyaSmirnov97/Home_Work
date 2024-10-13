@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="15" author="Ilya">
+        <insert tableName="pizza">
+            <column name="id" value="100d72f0-0b47-42d8-b95e-bf83d41c774a"/>
+            <column name="name" value="Маргарита"/>
+            <column name="price" value="500"/>
+            <column name="status" value="AVAILABLE"/>
+            <column name="is_deleted" value="false"/>
+        </insert>
+
+        <insert tableName="pizza">
+            <column name="id" value="5c75fcb3-2af6-4b1f-8c5f-1c1ef8a6231e"/>
+            <column name="name" value="Пепперони"/>
+            <column name="price" value="700"/>
+            <column name="status" value="AVAILABLE"/>
+            <column name="is_deleted" value="false"/>
+        </insert>
+
+        <insert tableName="pizza">
+            <column name="id" value="cb9d2e92-0f9a-4d79-a529-1f90e30f1d36"/>
+            <column name="name" value="Четыре сезона"/>
+            <column name="price" value="800"/>
+            <column name="status" value="AVAILABLE"/>
+            <column name="is_deleted" value="false"/>
+        </insert>
+
+        <insert tableName="pizza">
+            <column name="id" value="6d6d579b-91c4-448f-b53b-56dbff6f2d76"/>
+            <column name="name" value="Гавайская"/>
+            <column name="price" value="750"/>
+            <column name="status" value="AVAILABLE"/>
+            <column name="is_deleted" value="false"/>
+        </insert>
+
+        <insert tableName="pizza">
+            <column name="id" value="1f0f4e69-61c8-45dc-8ca8-e8a54e2d378c"/>
+            <column name="name" value="Вегетарианская"/>
+            <column name="price" value="650"/>
+            <column name="status" value="AVAILABLE"/>
+            <column name="is_deleted" value="false"/>
+        </insert>
+
+        <insert tableName="pizza">
+            <column name="id" value="42c54772-bc6b-4861-8b7f-f5c2fa433b0b"/>
+            <column name="name" value="Острая"/>
+            <column name="price" value="800"/>
+            <column name="status" value="AVAILABLE"/>
+            <column name="is_deleted" value="false"/>
+        </insert>
+
+        <insert tableName="pizza">
+            <column name="id" value="cf0c5167-3b2b-44cc-836e-4b9300e043a9"/>
+            <column name="name" value="Карбонара"/>
+            <column name="price" value="900"/>
+            <column name="status" value="AVAILABLE"/>
+            <column name="is_deleted" value="false"/>
+        </insert>
+
+        <insert tableName="pizza">
+            <column name="id" value="f6f7d23c-48e7-41d3-ae3d-cae4baf9b6cf"/>
+            <column name="name" value="Классическая"/>
+            <column name="price" value="550"/>
+            <column name="status" value="AVAILABLE"/>
+            <column name="is_deleted" value="false"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
