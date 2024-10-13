@@ -1,0 +1,30 @@
+# Логи
+*.log
+
+# Директории сборки
+target/
+out/
+build/
+
+# Класс-файлы
+*.class
+
+# IDE-специфические файлы
+.idea/
+*.iml
+*.jar
+*.war
+
+# Maven
+*.jar
+*.war
+*.ear
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
