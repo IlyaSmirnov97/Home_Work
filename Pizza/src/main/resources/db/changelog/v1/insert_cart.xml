@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="10" author="Ilya">
+        <insert tableName="cart">
+            <column name="id" value="d3e0380e-1d4b-4186-bc96-7ec1fcd7a5ea"/> <!-- Уникальный идентификатор корзины -->
+            <column name="customer_id" value="fc2ecfae-4fa4-4672-90ac-6672639fd370"/> <!-- UUID клиента -->
+            <column name="is_active" value="true"/> <!-- Активная корзина -->
+        </insert>
+
+        <insert tableName="cart">
+            <column name="id" value="52b6edcc-c61b-4d8e-89c2-f2e58012e70c"/> <!-- Уникальный идентификатор корзины -->
+            <column name="customer_id" value="8066dede-0c12-4fe7-bb7a-20755aae14df"/> <!-- UUID клиента -->
+            <column name="is_active" value="true"/> <!-- Активная корзина -->
+        </insert>
+
+        <insert tableName="cart">
+            <column name="id" value="47948d46-5e71-4a03-bf83-c0e40f2030ae"/> <!-- Уникальный идентификатор корзины -->
+            <column name="customer_id" value="dc76ae19-4e18-43af-a8db-560784d10856"/> <!-- UUID клиента -->
+            <column name="is_active" value="true"/> <!-- Активная корзина -->
+        </insert>
+    </changeSet>
+</databaseChangeLog>

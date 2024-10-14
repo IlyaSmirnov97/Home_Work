@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="12" author="Ilya">
+        <insert tableName="customer">
+            <column name="id" value="fc2ecfae-4fa4-4672-90ac-6672639fd370"/>
+            <column name="first_name" value="Пётр"/>
+            <column name="last_name" value="Синицин"/>
+            <column name="phone" value="9179999999"/>
+        </insert>
+
+        <insert tableName="customer">
+            <column name="id" value="8066dede-0c12-4fe7-bb7a-20755aae14df"/>
+            <column name="first_name" value="Аркадий"/>
+            <column name="last_name" value="Гришин"/>
+            <column name="phone" value="9178888888"/>
+        </insert>
+
+        <insert tableName="customer">
+            <column name="id" value="dc76ae19-4e18-43af-a8db-560784d10856"/>
+            <column name="first_name" value="Николай"/>
+            <column name="last_name" value="Петрович"/>
+            <column name="phone" value="9177777777"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
