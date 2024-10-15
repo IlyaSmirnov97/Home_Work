@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="13" author="Ilya">
+        <insert tableName="orders">
+            <column name="id" value="e0d0fbb3-44f7-4b36-8ae2-bc7afc36e6ff"/>
+            <column name="customer_id" value="fc2ecfae-4fa4-4672-90ac-6672639fd370"/> <!-- Замените на реальный UUID клиента -->
+            <column name="address_id" value="a1c8f89b-58d4-4146-9f5d-0d1d5fcb6001"/>           <!-- Адрес 1 -->
+            <column name="order_date" value="2024-10-12 10:00:00"/>
+            <column name="price" value="5000"/>
+            <column name="status" value="NEW"/>
+        </insert>
+
+        <insert tableName="orders">
+            <column name="id" value="b32b37f1-4e38-4b93-a49b-0a17dc2d3f4c"/>
+            <column name="customer_id" value="fc2ecfae-4fa4-4672-90ac-6672639fd370"/> <!-- Замените на реальный UUID клиента -->
+            <column name="address_id" value="b3d2e51f-bd56-4ef5-b1a3-e9fcb2c3e8c6"/>           <!-- Адрес 2 -->
+            <column name="order_date" value="2024-10-12 10:05:00"/>
+            <column name="price" value="4000"/>
+            <column name="status" value="IN_PROGRESS"/>
+        </insert>
+
+        <insert tableName="orders">
+            <column name="id" value="6aeea53e-6b58-4451-b028-fbf8fa2e8b7f"/>
+            <column name="customer_id" value="8066dede-0c12-4fe7-bb7a-20755aae14df"/> <!-- Замените на реальный UUID клиента -->
+            <column name="address_id" value="c1e1e6ef-f75e-4bc2-8929-4b2c2e26f4f3"/>           <!-- Адрес 3 -->
+            <column name="order_date" value="2024-10-12 10:10:00"/>
+            <column name="price" value="3000"/>
+            <column name="status" value="COMPLETED"/>
+        </insert>
+
+        <insert tableName="orders">
+            <column name="id" value="d42003a2-69c2-4d7b-b705-bbb7025f1651"/>
+            <column name="customer_id" value="8066dede-0c12-4fe7-bb7a-20755aae14df"/> <!-- Замените на реальный UUID клиента -->
+            <column name="address_id" value="d65f8c77-fb2e-4a8f-b70d-d1e2fa3de2c5"/>           <!-- Адрес 4 -->
+            <column name="order_date" value="2024-10-12 10:15:00"/>
+            <column name="price" value="2000"/>
+            <column name="status" value="CANCELLED"/>
+        </insert>
+
+        <insert tableName="orders">
+            <column name="id" value="12caa183-c82f-46d2-9346-0a73ab6b3025"/>
+            <column name="customer_id" value="dc76ae19-4e18-43af-a8db-560784d10856"/> <!-- Замените на реальный UUID клиента -->
+            <column name="address_id" value="e5d6d9e2-85b5-4d12-85b5-5f8d03b793b2"/>           <!-- Адрес 5 -->
+            <column name="order_date" value="2024-10-12 10:20:00"/>
+            <column name="price" value="1000"/>
+            <column name="status" value="AWAITING_PICKUP"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

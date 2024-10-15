@@ -1,0 +1,248 @@
+openapi: 3.0.0
+info:
+  title: CRUD API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+tags:
+  - name: CRUD methods api
+    description: API для операций CRUD с продуктами
+paths:
+  /api/pizza/{id}:
+    get:
+      tags:
+        - CRUD methods api
+      summary: Получить пиццу по ID
+      description: Получение пиццы по ее идентификатору.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Идентификатор пиццы.
+      responses:
+        '200':
+          description: Успешный ответ
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pizza'
+        '404':
+          description: Пицца не найдена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/pizza/all:
+    get:
+      tags:
+        - CRUD methods api
+      summary: Получить все пиццы
+      description: Получение списка всех пицц.
+      responses:
+        '200':
+          description: Успешный ответ
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pizza'
+        '400':
+          description: Не удалось получить пиццы
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/pizza/delete/{id}:
+    delete:
+      tags:
+        - CRUD methods api
+      summary: Удалить пиццу по ID
+      description: Удаление пиццы по ее идентификатору.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Идентификатор пиццы.
+      responses:
+        '200':
+          description: Успешный ответ
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Пицца удалена"
+        '400':
+          description: Ошибка при удалении пиццы
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Пицца не найдена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/pizza/create:
+    post:
+      tags:
+        - CRUD methods api
+      summary: Добавить новую пиццу
+      description: Добавление новой пиццы.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PizzaRequest'
+      responses:
+        '200':
+          description: Успешный ответ
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Пицца добавлена"
+        '400':
+          description: Не удалось добавить пиццу.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Пицца с таким артикулом уже существует.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/pizza/update/{id}:
+    put:
+      tags:
+        - CRUD methods api
+      summary: Обновить пиццу по ID
+      description: Обновление пиццы по ее идентификатору.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Идентификатор пиццы.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pizza'
+      responses:
+        '200':
+          description: Успешный ответ
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Пицца обновлена"
+        '400':
+          description: Ошибка при обновлении пиццы с id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Пицца не найдена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Пицца с таким артикулом уже существует.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    Pizza:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: Уникальный идентификатор пиццы.
+        name:
+          type: string
+          description: Название пиццы.
+        articular:
+          type: string
+          description: Уникальный артикул пиццы.
+        description:
+          type: string
+          description: Описание пиццы.
+        category:
+          type: string
+          description: Категория пиццы.
+        cost:
+          type: number
+          format: double
+          description: Стоимость пиццы.
+        amount:
+          type: integer
+          description: Количество пиццы.
+        created:
+          type: string
+          format: date-time
+          description: Метка времени создания пиццы.
+        updatedOn:
+          type: string
+          format: date-time
+          description: Метка времени последнего обновления пиццы.
+
+    PizzaRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Название пиццы.
+        articular:
+          type: string
+          description: Уникальный артикул пиццы.
+        description:
+          type: string
+          description: Описание пиццы.
+        category:
+          type: string
+          description: Категория пиццы.
+        cost:
+          type: number
+          format: double
+          description: Стоимость пиццы.
+        amount:
+          type: integer
+          description: Количество пиццы.
+
+    ErrorResponse:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          description: Код состояния HTTP.
+        message:
+          type: string
+          description: Текст сообщения об ошибке.
+        timestamp:
+          type: string
+          format: date-time
+          description: Временная метка ошибки.
