@@ -54,7 +54,6 @@ public class AddressService {
         addressDto.setCity(address.getCity());
         addressDto.setState(address.getState());
         addressDto.setPostalCode(address.getPostalCode());
-        addressDto.setCustomer(address.getCustomer());
         return addressDto;
     }
 
@@ -65,7 +64,6 @@ public class AddressService {
         address.setCity(addressDto.getCity());
         address.setState(addressDto.getState());
         address.setPostalCode(addressDto.getPostalCode());
-        address.setCustomer(addressDto.getCustomer());
         return address;
     }
 }

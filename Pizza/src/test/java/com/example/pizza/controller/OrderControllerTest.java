@@ -3,6 +3,7 @@ package com.example.pizza.controller;
 import com.example.pizza.model.Order;
 import com.example.pizza.model.dto.OrderDto;
 import com.example.pizza.service.OrderService;
+import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -23,6 +24,7 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+@RequiredArgsConstructor
 class OrderControllerTest {
 
     private MockMvc mockMvc;

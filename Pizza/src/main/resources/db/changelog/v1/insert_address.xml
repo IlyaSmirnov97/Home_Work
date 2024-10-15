@@ -10,7 +10,7 @@
             <column name="street" value="Ленина, 1"/>
             <column name="city" value="Москва"/>
             <column name="state" value="Москва"/>
-            <column name="postalCode" value="101000"/>
+            <column name="postal_code" value="101000"/>
         </insert>
 
         <insert tableName="address">
@@ -18,7 +18,7 @@
             <column name="street" value="Пушкина, 2"/>
             <column name="city" value="Санкт-Петербург"/>
             <column name="state" value="Санкт-Петербург"/>
-            <column name="postalCode" value="190000"/>
+            <column name="postal_code" value="190000"/>
         </insert>
 
         <insert tableName="address">
@@ -26,7 +26,7 @@
             <column name="street" value="Суворова, 3"/>
             <column name="city" value="Екатеринбург"/>
             <column name="state" value="Свердловская область"/>
-            <column name="postalCode" value="620000"/>
+            <column name="postal_code" value="620000"/>
         </insert>
 
         <insert tableName="address">
@@ -34,7 +34,7 @@
             <column name="street" value="Кирова, 4"/>
             <column name="city" value="Новосибирск"/>
             <column name="state" value="Новосибирская область"/>
-            <column name="postalCode" value="630000"/>
+            <column name="postal_code" value="630000"/>
         </insert>
 
         <insert tableName="address">
@@ -42,7 +42,7 @@
             <column name="street" value="Гоголя, 5"/>
             <column name="city" value="Казань"/>
             <column name="state" value="Татарстан"/>
-            <column name="postalCode" value="420000"/>
+            <column name="postal_code" value="420000"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

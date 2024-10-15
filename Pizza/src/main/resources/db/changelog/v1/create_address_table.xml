@@ -18,7 +18,7 @@
             <column name="state" type="varchar(250)">
                 <constraints nullable="false"/>
             </column>
-            <column name="postalCode" type="varchar(250)">
+            <column name="postal_code" type="varchar(250)">
                 <constraints nullable="false"/>
             </column>
             <column name="country" type="varchar(250)">

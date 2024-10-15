@@ -1,6 +1,5 @@
 package com.example.pizza.service;
 
-import com.example.pizza.model.Customer;
 import com.example.pizza.model.Order;
 import com.example.pizza.model.dto.OrderDto;
 import com.example.pizza.repository.OrderRepository;
@@ -18,18 +17,18 @@ public class OrderService {
     private final OrderRepository orderRepository;
 
     // Получение заказа по id
-    public OrderDto getOrderId (UUID id){
-        Order order = orderRepository.findById(id).orElseThrow(()->new RuntimeException("Not found"));
+    public OrderDto getOrderId(UUID id) {
+        Order order = orderRepository.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
         return ConvertDtoToOrder(order);
     }
 
     // Создание заказа
-    public void createOrder(Order order){
+    public void createOrder(Order order) {
         orderRepository.save(order);
     }
 
     // Получение всех заказов
-    public List<OrderDto> getAllOrders () {
+    public List<OrderDto> getAllOrders() {
         List<Order> orders = orderRepository.findAll();
         return orders.stream().map(this::ConvertDtoToOrder).collect(Collectors.toList());
     }
@@ -44,17 +43,19 @@ public class OrderService {
         }
         return Optional.empty(); // Если заказ не найден
     }
-    private OrderDto ConvertDtoToOrder (Order order) {
+
+    private OrderDto ConvertDtoToOrder(Order order) {
         OrderDto orderDto = new OrderDto();
-        orderDto.setId(orderDto.getId());
-        orderDto.setOrder_date(orderDto.getOrder_date());
-        orderDto.setCustomer(orderDto.getCustomer());
-        orderDto.setStatus(orderDto.getStatus());
-        orderDto.setPrice(orderDto.getPrice());
-        orderDto.setAddress(orderDto.getAddress());
+        orderDto.setId(order.getId());
+        orderDto.setOrder_date(order.getOrder_date());
+        orderDto.setCustomer(order.getCustomer());
+        orderDto.setStatus(order.getStatus());
+        orderDto.setPrice(order.getPrice());
+        orderDto.setAddress(order.getAddress());
         return orderDto;
     }
-    private Order ConvertOrderDtoToOrder (OrderDto orderDto) {
+
+    private Order ConvertOrderDtoToOrder(OrderDto orderDto) {
         Order order = new Order();
         order.setId(orderDto.getId());
         order.setOrder_date(orderDto.getOrder_date());

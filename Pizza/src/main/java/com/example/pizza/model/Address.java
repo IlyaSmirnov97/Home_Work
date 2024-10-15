@@ -30,7 +30,4 @@ public class Address {
     @NonNull
     private String postalCode;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_id")
-    private Customer customer;
 }
